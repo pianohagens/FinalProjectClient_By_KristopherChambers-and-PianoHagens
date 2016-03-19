@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FinalProjectService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:65528/FinalProjectService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:65528/FinalProjectService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:65528/FinalProjectService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:65528/FinalProjectService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFinalProjectService_GetAllShows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShows" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_GetAllShows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_GetAllArtists_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllArtists" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_GetAllArtists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllArtistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_GetAllvenues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllvenues" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_GetAllvenues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllvenuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_GetShowsByArtist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowsByArtist" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_GetShowsByArtist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowsByArtistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_GetShowsByVenue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowsByVenue" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_GetShowsByVenue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowsByVenueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_venueLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:venueLogin" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_venueLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:venueLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_venueRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:venueRegistration" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_venueRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:venueRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_FanLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:FanLogin" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_FanLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FanLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_Fangistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:Fangistration" />
+  </wsdl:message>
+  <wsdl:message name="IFinalProjectService_Fangistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FangistrationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFinalProjectService">
+    <wsdl:operation name="GetAllShows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinalProjectService/GetAllShows" message="tns:IFinalProjectService_GetAllShows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinalProjectService/GetAllShowsResponse" message="tns:IFinalProjectService_GetAllShows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllArtists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinalProjectService/GetAllArtists" message="tns:IFinalProjectService_GetAllArtists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinalProjectService/GetAllArtistsResponse" message="tns:IFinalProjectService_GetAllArtists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllvenues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinalProjectService/GetAllvenues" message="tns:IFinalProjectService_GetAllvenues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinalProjectService/GetAllvenuesResponse" message="tns:IFinalProjectService_GetAllvenues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShowsByArtist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinalProjectService/GetShowsByArtist" message="tns:IFinalProjectService_GetShowsByArtist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinalProjectService/GetShowsByArtistResponse" message="tns:IFinalProjectService_GetShowsByArtist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShowsByVenue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinalProjectService/GetShowsByVenue" message="tns:IFinalProjectService_GetShowsByVenue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinalProjectService/GetShowsByVenueResponse" message="tns:IFinalProjectService_GetShowsByVenue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="venueLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinalProjectService/venueLogin" message="tns:IFinalProjectService_venueLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinalProjectService/venueLoginResponse" message="tns:IFinalProjectService_venueLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="venueRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinalProjectService/venueRegistration" message="tns:IFinalProjectService_venueRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinalProjectService/venueRegistrationResponse" message="tns:IFinalProjectService_venueRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FanLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinalProjectService/FanLogin" message="tns:IFinalProjectService_FanLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinalProjectService/FanLoginResponse" message="tns:IFinalProjectService_FanLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Fangistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinalProjectService/Fangistration" message="tns:IFinalProjectService_Fangistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinalProjectService/FangistrationResponse" message="tns:IFinalProjectService_Fangistration_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFinalProjectService" type="tns:IFinalProjectService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllShows">
+      <soap:operation soapAction="http://tempuri.org/IFinalProjectService/GetAllShows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllArtists">
+      <soap:operation soapAction="http://tempuri.org/IFinalProjectService/GetAllArtists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllvenues">
+      <soap:operation soapAction="http://tempuri.org/IFinalProjectService/GetAllvenues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShowsByArtist">
+      <soap:operation soapAction="http://tempuri.org/IFinalProjectService/GetShowsByArtist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShowsByVenue">
+      <soap:operation soapAction="http://tempuri.org/IFinalProjectService/GetShowsByVenue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="venueLogin">
+      <soap:operation soapAction="http://tempuri.org/IFinalProjectService/venueLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="venueRegistration">
+      <soap:operation soapAction="http://tempuri.org/IFinalProjectService/venueRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FanLogin">
+      <soap:operation soapAction="http://tempuri.org/IFinalProjectService/FanLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fangistration">
+      <soap:operation soapAction="http://tempuri.org/IFinalProjectService/Fangistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FinalProjectService">
+    <wsdl:port name="BasicHttpBinding_IFinalProjectService" binding="tns:BasicHttpBinding_IFinalProjectService">
+      <soap:address location="http://localhost:65528/FinalProjectService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
